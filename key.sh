@@ -30,7 +30,7 @@ expect {
 #	timeout(exit 127)
 }
 
-set timeouit 3
+set timeouit 1
 spawn ssh-copy-id -i $env(key_path)id_rsa.pub root@$env(ip) -o PubkeyAuthentication=no
 expect {
 	"continue" {send "yes\r";exp_continue;}
